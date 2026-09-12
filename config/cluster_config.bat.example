@@ -1,0 +1,9 @@
+@echo off
+REM Copia questo file in cluster_config.bat (NON versionato) e imposta il tuo username.
+REM Usato da fetch_results.bat per scaricare i risultati dal cluster.
+
+set CLUSTER_USER=u12345678
+set CLUSTER_HOST=10.78.18.100
+REM Percorso assoluto del repo sul cluster (usiamo /work perche' condiviso via NFS
+REM come /home, ma con quota piu' ampia: vedi Students_Cluster_Guide.pdf, sezione 2.1/4.1)
+set REMOTE_DIR=/work/%CLUSTER_USER%/tesi

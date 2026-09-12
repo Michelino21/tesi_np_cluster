@@ -1,15 +1,26 @@
 # script generati da make convert / convert-all
-scripts/*.py
+scripts/*
+!scripts/.gitkeep
 
-# log locali e output PBS
-logs/
+# output PBS "di scorta" (se un job fallisce prima di creare la sua
+# cartella in results/, PBS scrive qui con il nome di default)
 *.o[0-9]*
 *.e[0-9]*
+
+#dati da non versionare
+results/*
+!results/.gitkeep
+# manifest testuale con i nomi delle cartelle dell'ultimo run: QUESTO va
+# versionato (lo aggiorna e lo pusha submit_chain.sh a fine catena)
+!results/last_results.txt
 
 # ambienti python
 .venv/
 venv/
 my_env/
+
+# config personale (username cluster, per fetch_results.bat)
+config/cluster_config.bat
 
 # varie
 __pycache__/
