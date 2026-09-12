@@ -1,0 +1,18 @@
+# script generati da make convert / convert-all
+scripts/*.py
+
+# log locali e output PBS
+logs/
+*.o[0-9]*
+*.e[0-9]*
+
+# ambienti python
+.venv/
+venv/
+my_env/
+
+# varie
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
