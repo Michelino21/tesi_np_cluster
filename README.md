@@ -14,10 +14,15 @@ git commit -m "descrizione modifiche"
 git push
 ```
 
+**PER ENTRARE NEL CLUSTER***
+```bash
+./cluster_login.bat
+```
+
 **Sul cluster** (esecuzione):
 ```bash
 cd /work/$(whoami)/tesi          # cartella di lavoro
-. /etc/profile.d/pbs.sh          # comandi PBS (basta una volta per shell)
+. /etc/profile.d/pbs.sh          # comandi PBS (basta una volta per shell) (NON SERVE)
 make pull                        # aggiorna il repo
 source .venv/bin/activate        # attiva ambiente python
 make chain                       # converte i notebook e sottomette i job in sequenza
