@@ -35,9 +35,10 @@ MANIFEST="${RESULTS_DIR}/last_results.txt"
 
 # Ordine di esecuzione della catena.
 JOBS=(
-    "gaussian_H1_highBref_imbalance_validation"
-    "multidistribution_cluster_ready_clean"
-    "unbalanced_multidistribution_cluster_ready_clean"
+#    "gaussian_H1_highBref_imbalance_validation"
+#    "multidistribution_cluster_ready_clean"
+#    "unbalanced_multidistribution_cluster_ready_clean"
+"test_pipeline"
 )
 
 mkdir -p "$RESULTS_DIR"
