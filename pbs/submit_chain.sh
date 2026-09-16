@@ -27,7 +27,7 @@ set -euo pipefail
 # ---- Configurazione ----
 QUEUE="cpu"
 NCPUS=1
-WALLTIME="04:00:00"
+WALLTIME="42:00:00"
 VENV_ACTIVATE=".venv/bin/activate"   # creato con `make venv`
 SCRIPT_DIR="scripts"
 RESULTS_DIR="results"
