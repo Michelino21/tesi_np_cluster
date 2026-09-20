@@ -14,7 +14,7 @@ git commit -m "descrizione modifiche"
 git push
 ```
 
-**PER ENTRARE NEL CLUSTER***
+**PER ENTRARE NEL CLUSTER (LA VPN DEVE ESSERE ATTIVA)***
 ```bash
 ./cluster_login.bat
 ```

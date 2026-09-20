@@ -11,7 +11,7 @@ CONFIG_DIR := config
 NOTEBOOKS  := $(wildcard $(NB_DIR)/*.ipynb)
 SCRIPTS    := $(patsubst $(NB_DIR)/%.ipynb,$(SCRIPT_DIR)/%.py,$(NOTEBOOKS))
 
-.PHONY: help venv convert convert-all pull push commit chain clean
+.PHONY: help venv convert convert-all pull push commit chain status clean
 
 help:
 	@echo "Comandi disponibili:"
@@ -23,6 +23,7 @@ help:
 	@echo "  make push                             -> git push"
 	@echo "  make commit m=\"messaggio\"             -> git add -A && git commit -m messaggio"
 	@echo "  make chain                            -> converte tutto e sottomette la catena PBS (solo cluster)"
+	@echo "  make status                           -> qstat: stato dei tuoi job PBS (solo cluster)"
 	@echo "  make clean                             -> rimuove gli script .py generati"
 
 venv:
@@ -55,6 +56,9 @@ commit:
 
 chain: convert-all
 	bash $(PBS_DIR)/submit_chain.sh
+
+status:
+	qstat -u $$(whoami)
 
 clean:
 	rm -rf $(SCRIPT_DIR)
