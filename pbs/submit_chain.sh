@@ -37,7 +37,7 @@ MANIFEST="${RESULTS_DIR}/last_results.txt"
 JOBS=(
 #    "gaussian_H1_highBref_imbalance_validation"
 #    "multidistribution_cluster_compliant"
-"unbalanced_multidistribution_cluster_ready_clean"
+"unbalanced_multidistribution_cluster_compliant"
 #    "test_pipeline"
 )
 
