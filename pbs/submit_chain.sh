@@ -36,7 +36,7 @@ MANIFEST="${RESULTS_DIR}/last_results.txt"
 # Ordine di esecuzione della catena.
 JOBS=(
 #    "gaussian_H1_highBref_imbalance_validation"
-"multidistribution_cluster_compliant"
+"multidistribution_cluster_shared_permutations"
 #    "unbalanced_multidistribution_cluster_compliant"
 #    "test_pipeline"
 )
